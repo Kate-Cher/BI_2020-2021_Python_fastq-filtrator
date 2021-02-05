@@ -10,7 +10,7 @@ def length_filter(read, minimal):
 
 
 def gc_bounder(read, gc_min, gc_max):
-    gc_count = (read.count('C') + read.count('G')) / (len(read) - 1) * 100
+    gc_count = (read.count('C') + read.count('G') + read.count('c') + read.count('g')) / (len(read) - 1) * 100
     if gc_min <= gc_count <= gc_max:
         return 1
     else:
